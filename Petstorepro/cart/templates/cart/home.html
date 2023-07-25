@@ -1,0 +1,58 @@
+{% extends 'base/base.html'%}
+{% block title %} {{title}} {% endblock %}
+{% block content%} 
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Pet</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in items %}
+        <tr>
+            <td>
+                <img src="{{pet.image}}" width="60" height="200" class="card-img" alt="">
+                <br>
+                <h4>{{item.pet.name}}</h4>
+            </td>
+            <td>
+                <input type="number" min="0" value="{{item.quantity}}" />
+            </td>
+            <td>
+                <input type="text" value="{{item.totalprice}}" />
+            </td>
+            <td><a href="{% url 'cart:deleitem' item.id %}">Delete</a></td>
+        {% endfor %}
+        </tr>
+    </tbody>
+
+</table>
+
+
+<script>
+    $(document).ready(function(){
+        $('.qnt').change(function(){
+
+            quantity =$(this).val()
+            price= $(this).parent().prev().html()
+
+            id= $(this).attr('cartid')
+
+            $.ajax({
+                url:"/cart/updatecart/",
+                method:"POST",
+                data: {'qnt':quantity, 'price':price, 'cid':id, 'csrfmiddlewaretoken':'{{csrf_token}}'},
+                success: function(response){
+                    $("#toatlprice"+id).val(response.totalprice);
+                    $('#totalamount').val(response.totalam);
+                },
+                error: function() {}
+            })
+
+        })
+    })
+</script>
+{% endblock %}

@@ -1,0 +1,251 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>Pet Shop</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0 fixed-top-scroll ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#home">
+            <h1><i class="bi bi-shop fs-1 text-primary me-3">Pet Shop</i>
+            </h1></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#service">Service</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  Catagory
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="/dog">Dog</a>
+                  <a class="dropdown-item" href="/cat">Cat</a>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            
+
+            <li class="nav-item">
+              <a class="nav-link" href="/cart"><button type="button" class="btn btn-secondary">Cart</button></a>
+            </li>
+          </ul>
+
+            
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="/search">Search</button>
+              </form>
+          
+          
+        
+          </div>
+        </div>
+      </nav>
+<section id ="home">
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1563460716037-460a3ad24ba9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBldHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Pet Shop</h5>
+              <p class="card-text"> Welcome To Our Pet Shop . We Like to Take Out Cute Pet.
+                It's Your Life Happy and Make Good Pleasent.
+              </p>
+              <p class="card-text"><small class="text-body-secondary">Thank You..</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+<div>     
+{% block content %} 
+
+{% endblock %}
+</div>
+</section><br><br><br>
+<hr>
+
+<section id="about">
+  <div class="card bg-dark text-white">
+    <img src="https://images.unsplash.com/photo-1585849847025-256a1488e653?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fGRvZyUyMGFuZCUyMGNhdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" class="card-img" alt="">
+    <div class="card-img-overlay">
+      <h5 class="card-title">About Pet Shop</h5>
+      <p class="card-text">Imagine coming home after a tough, long day and being greeted by your four-legged furry friend wrapping itself around your legs with a grin</p>
+      <p class="card-text">Thank You..</p>
+    </div>
+  </div>
+</section>
+<section id="service">
+<div class="card" style="width: 18rem;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-L4RB6Fl3f0ZbNj4FFJVbvHVz2BodHBQWUg&usqp=CAU" width="80" height="280" class="card-img-top" alt="">
+  <div class="card-body">
+    <p class="card-text">We Have Pet Service center . we Have Doctors to Check Up The Pets To Healthy </p>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+  <div class="container mt-3 contactContent">
+      <h1 class="text-center">Contact Me</h1>
+      <div class="col-lg-6">
+          <form>
+              <input type="text" class="form-control form-control-lg" placeholder="Name">
+              <input type="email" class="form-control mt-3" placeholder="Email">
+              <input type="text" class="form-control mt-3" placeholder="Address">
+          </form>
+          <button type="button" class="btn btn-success mt-3">Contact Me</button>
+          
+      </div>
+
+  </div>
+</div>
+</section><br><br>
+<hr>
+<div class="container-fluid bg-light mt-5 py-5">
+
+  <div class="container pt-5">
+
+      <div class="row g-5">
+
+          <div class="col-lg-3 col-md-6">
+
+              <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Get In Touch</h5>
+
+              <p class="mb-4">Our Pet Shop</p>
+
+              <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>123 Street,Chennai, TamilNadu</p>
+
+              <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
+
+              <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+9876543210</p>
+
+          </div>
+
+
+
+          <div class="col-lg-3 col-md-6">
+
+              <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Newsletter</h5>
+
+              <form action="">
+
+                  <div class="input-group">
+
+                      <input type="text" class="form-control p-3" placeholder="Your Email">
+
+                      <button class="btn btn-primary">Sign Up</button>
+
+                  </div>
+
+              </form>
+
+              <h6 class="text-uppercase mt-4 mb-3">Follow Us</h6>
+
+              <div class="d-flex">
+
+                  <a class="btn btn-outline-primary btn-square me-2" href="#"><i class="bi bi-twitter"></i></a>
+
+                  <a class="btn btn-outline-primary btn-square me-2" href="#"><i class="bi bi-facebook"></i></a>
+
+                  <a class="btn btn-outline-primary btn-square me-2" href="#"><i class="bi bi-linkedin"></i></a>
+
+                  <a class="btn btn-outline-primary btn-square" href="#"><i class="bi bi-instagram"></i></a>
+
+              </div>
+
+          </div>
+
+          <div class="col-12 text-center text-body">
+
+              <a class="text-body" href="">Terms & Conditions</a>
+
+              <span class="mx-1">|</span>
+
+              <a class="text-body" href="">Privacy Policy</a>
+
+              <span class="mx-1">|</span>
+
+              <a class="text-body" href="">Customer Support</a>
+
+              <span class="mx-1">|</span>
+
+              <a class="text-body" href="">Payments</a>
+
+              <span class="mx-1">|</span>
+
+              <a class="text-body" href="">Help</a>
+
+              <span class="mx-1">|</span>
+
+              <a class="text-body" href="">FAQs</a>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</div>
+
+<div class="container-fluid bg-dark text-white-50 py-4">
+
+  <div class="container">
+
+      <div class="row g-5">
+
+          <div class="col-md-6 text-center text-md-start">
+
+              <p class="mb-md-0">&copy; <a class="text-white" href="#">Your Site Name</a>. All Rights Reserved.</p>
+
+          </div>
+
+          <div class="col-md-6 text-center text-md-end">
+
+              <p class="mb-0">Designed by <a class="text-white" href="https://htmlcodex.com">HTML Codex</a></p>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
